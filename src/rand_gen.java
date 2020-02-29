@@ -1,11 +1,11 @@
 import java.util.*;
 
 public class rand_gen{
-	public int generator() {
+	public int generator(int mod) {
 		int seed = time();
 		int mult = 69;
 		int addc = 42069420;
-		int mod = 43;
+		seed = generate(mult, addc, mod, seed);
 		seed = generate(mult, addc, mod, seed);
 		return seed;
 	}
