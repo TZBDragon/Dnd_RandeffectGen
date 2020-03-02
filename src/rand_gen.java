@@ -18,6 +18,7 @@ public class rand_gen{
 		
 		return seedn;
 	}
+	//Adapted from information on wikipedia https://en.wikipedia.org/wiki/Linear_congruential_generator
 	public static int time() {
 		Date curr = new Date();
 		return (int)curr.getTime();
