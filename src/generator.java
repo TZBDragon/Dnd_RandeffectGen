@@ -109,7 +109,7 @@ public class generator{
 				/*Everything in 1000ft */{"","",""},
 				/*Everything in 1 mile */{"","",""},
 				/*Everything in 10 miles */{"","",""},
-				/*Nearest Star */{"explodes","becomes a black hole","dies", ""},
+				/*Nearest Star */{"explodes","becomes a black hole","dies", "becomes green"},
 				/*Nearest Planet (not yours) */{"","",""},
 				/*Current Planet */{"","",""},
 				/*Nearest Portal */{"","",""},
