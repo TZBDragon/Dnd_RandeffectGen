@@ -29,11 +29,9 @@ public class application_main{
 		 JPanel p = new JPanel();
 		 p.add(b);
 		 p.add(l);
-		 f.add(p);
-		 l.setSize(300, 30);
-	     l.setLocation(5, 5);
 		 b.setSize((int)fwidth / 6, (int) fheight / 8);
 		 b.setLocation((int) fwidth / 2, (int) fheight / 3);
+		 f.add(p);
 		 f.setContentPane(p);
 		 f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
