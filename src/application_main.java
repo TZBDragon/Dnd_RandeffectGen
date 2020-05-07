@@ -22,6 +22,7 @@ public class application_main{
 		 double fwidth = f.getWidth();
 		 double fheight = f.getHeight();
 		 JButton b = new JButton("Generate");
+		 JButton closeb = new JButton("Close");
 		 b.setVisible(true);
 		 JLabel l = new JLabel("Help me", JLabel.CENTER);
 		
@@ -29,6 +30,7 @@ public class application_main{
 		 JPanel p = new JPanel();
 		 p.add(b);
 		 p.add(l);
+		 p.add(closeb);
 		 b.setSize((int)fwidth / 6, (int) fheight / 8);
 		 b.setLocation((int) fwidth / 2, (int) fheight / 3);
 		 f.add(p);
