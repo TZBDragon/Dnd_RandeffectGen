@@ -7,8 +7,9 @@ public class rand_gen{
 		int mult = 961748941;
 		int addc = 982451653;
 		seed = generate(mult, addc, fmod, seed);
-		mult = generate(mult, addc, fmod, seed);
+		mult = generate2(mult, addc, fmod, seed);
 		addc = generate(mult, addc, fmod, seed);
+		seed = generate2(mult, addc, fmod, seed);
 		seed = generate(mult, addc, mod, seed);
 		if(seed < 0) {
 			seed *= -1;
@@ -22,9 +23,16 @@ public class rand_gen{
 		
 		return seedn;
 	}
-	//Adapted from information on wikipedia https://en.wikipedia.org/wiki/Linear_congruential_generator
 	public static int time() {
 		Date curr = new Date();
 		return (int)curr.getTime();
+	}
+	
+	public static int generate2(int a, int c, int m, int seed) {
+		int seedn = 0;
+		double r = 3.759816;
+		seedn = (int)(r * (double)seed) * (1 - seed); 
+		
+		return seedn;
 	}
 }

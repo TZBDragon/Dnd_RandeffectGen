@@ -17,7 +17,8 @@ public class application_main{
 		 f.setLocation((int)width / 4, (int)height / 4);
 		 f.setTitle("D&D Random Effect Generator");
 		 Container c = f.getContentPane();
-		 c.setBackground(Color.white);
+		 c.setBackground(Color.black);
+		 f.setBackground(Color.black);
 		 f.setResizable(true);
 		 double fwidth = f.getWidth();
 		 double fheight = f.getHeight();
