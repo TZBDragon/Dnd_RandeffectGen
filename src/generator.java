@@ -8,7 +8,7 @@ public class generator{
 		int reroll = -1;
 		while(rand == 42) {
 			rand = randn.generator(42);
-			reroll += 1;
+			reroll++;
 			if(reroll == 10) {
 				System.out.println("The game is over and everything has died please reroll players or end game/session");
 			}
