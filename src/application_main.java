@@ -1,44 +1,40 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.*;
 import java.util.Timer;
-
+import java.awt.*;
 @SuppressWarnings("unused")
 public class application_main{
-	public static void run() {
-		long start = System.currentTimeMillis();
-		 long end = 0;
-		 Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		 double width = screenSize.getWidth();
-		 double height = screenSize.getHeight();
-		 JFrame f= new JFrame();
-		 f.setVisible(true);
-		 f.setSize((int)width / 2, (int) height / 2);
-		 f.setLocation((int)width / 4, (int)height / 4);
-		 f.setTitle("D&D Random Effect Generator");
-		 Container c = f.getContentPane();
-		 c.setBackground(Color.black);
-		 f.setResizable(true);
-		 double fwidth = f.getWidth();
-		 double fheight = f.getHeight();
-		 JButton b = new JButton("Generate");
-		 JButton closeb = new JButton("Close");
-		 b.setVisible(true);
-		 JLabel l = new JLabel("Help me", JLabel.CENTER);
-		
-	   
-		 JPanel p = new JPanel();
-		 p.add(b);
-		 p.add(l);
-		 p.add(closeb);
-		 b.setSize((int)fwidth / 6, (int) fheight / 8);
-		 b.setLocation((int) fwidth / 2, (int) fheight / 3);
-		 f.add(p);
-		 f.setContentPane(p);
-		 f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
  public static void main(String args[] ){
-	 run();
+	 Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+	 double width = screenSize.getWidth();
+	 double height = screenSize.getHeight();
+	 JFrame frame = new JFrame("D&D Random effect Generator");
+	 frame.setSize((int)width / 4, (int) height / 4);
+	 frame.setLocation((int)width / 4, (int)height / 4);
+	 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	 JPanel panel = new JPanel();
+	 frame.add(panel);
+	 panel.setLayout(null);
+	 JLabel label1 = new JLabel("Hit Generate to generate");
+	 label1.setBounds(150, 0, 250, 20);
+	 panel.add(label1);
+	 JButton button = new JButton("Generate");
+	 button.setBounds(150, 30, 150, 30);
+	 JLabel label2 = new JLabel(generator.run());
+	 label2.setBounds(25, 0, 3500, 250);
+	 panel.add(label2);
+	 button.addActionListener(new ActionListener() {
+		 @Override
+         public void actionPerformed(ActionEvent e) {
+		 label2.setText(generator.run());
+		 }
+	 });
+	panel.add(button);
+	 
+	 frame.setVisible(true);
 	 
  }
 }
